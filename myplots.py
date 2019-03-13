@@ -5,6 +5,9 @@ from bokeh.io import output_notebook, show
 output_notebook(hide_banner=True)
 
 def make_some_plot():
+    """
+    nix-shell -p python36Packages.jupyterlab -p python36Packages.bokeh
+    """
     x = [x*0.005 for x in range(0, 201)]
     source = ColumnDataSource(data=dict(x=x, y=x))
     plot = figure(plot_width=400, plot_height=400)
